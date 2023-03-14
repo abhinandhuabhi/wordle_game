@@ -1,0 +1,230 @@
+html,
+body {
+  
+  text-align: center;
+  
+}
+h1 {
+  font-size: 50px;
+  color:  rgb(232, 184, 62);
+  text-shadow: 5px 5px #030303;
+}
+h2{
+  font-size: 35px;
+  color: rgb(245, 11, 11);
+  text-shadow: 2px 2px #030303;
+}
+p,h3{
+  
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  
+}
+button {
+  padding: 0.5rem 1.5rem;
+  background-color: #00bfff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#but {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background-color: #cde14a;
+  color: rgb(18, 18, 18);
+  border-radius: 15px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+#keyboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #020202;
+  border-radius: 5px;
+  margin-right: 5px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 20px;
+  font-weight: bold;
+  color:rgb(232, 184, 62);;
+  background-color: #040404;
+}
+
+.key:hover {
+  color:rgb(0, 0, 0);
+  background-color: #eff308;
+}
+
+.key[data-letter="Enter"] {
+  grid-column: 10 / span 2;
+}
+
+.key[data-key="enter"] {
+  grid-column: 4 / span 2;
+  grid-row: 4 / span 2;
+}
+#enter-key {
+  
+  width: 75px;
+  height: 40px;
+}
+#bck-key{
+  width: 125px;
+  height: 40px;
+}
+#print {
+  font-family: Verdana,
+      Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  color: rgb(207, 13, 13);;
+  font-size: 20px;
+}
+
+:root {
+  background-image: url('https://imageio.forbes.com/specials-images/imageserve/61c44790ad24ec2b4635c7e8/Wooden-English-letters-background/960x0.jpg?format=jpg&width=960');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  --default: #121213;
+  --empty: #3a3a3c;
+  --wrong: #b59f3b;
+  --right: #538d4e;
+}
+
+#game {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  
+  
+}
+
+.grid {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-template-columns: repeat(5, auto);
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  border: 2px solid var(--empty);
+  margin: 4px;
+  color: rgb(17, 16, 16);
+  background-color: rgb(229, 222, 170);
+  text-transform: uppercase;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+}
+
+.box.empty {
+  background: var(--empty);
+}
+
+.box.wrong {
+  background: var(--wrong);
+}
+
+.box.right {
+  background: var(--right);
+}
+
+.animated {
+  animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.title {
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.title-word-clone {
+  position: absolute;
+  left: calc(50% + 75px);
+  transform: rotate(25deg);
+  color: yellow;
+  font-size: 1.2rem;
+}
+
+hr {
+  border-style: solid;
+  border-color: var(--empty);
+  border-width: 1px;
+}
+
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.keyboard-key {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  color: white;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.keyboard-key:hover {
+  background-color: #555;
+}
+
+.keyboard-key:active {
+  background-color: #222;
+}
